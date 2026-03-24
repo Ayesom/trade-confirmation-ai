@@ -1,0 +1,164 @@
+{
+  "fx_spot": {
+    "governing_law": [
+      "This Agreement shall be governed by and construed in accordance with the laws of England and Wales.",
+      "This Agreement shall be governed by and construed in accordance with the laws of New York State.",
+      "This Agreement shall be governed by and construed in accordance with the laws of Singapore."
+    ],
+    "settlement": [
+      "Settlement shall occur on a T+2 basis unless otherwise agreed in writing by both parties.",
+      "Settlement shall occur on a T+1 basis as mutually agreed by both parties prior to execution.",
+      "Settlement shall be effected through the agreed correspondent banking channels on the Value Date."
+    ],
+    "netting": [
+      "All obligations under this Confirmation are subject to netting as per the ISDA Master Agreement.",
+      "Payment netting shall apply to all amounts due on the same Value Date in the same currency."
+    ],
+    "representations": [
+      "Each party represents that it has full power and authority to enter into this transaction.",
+      "Each party represents that this transaction has been duly authorized by all necessary corporate action.",
+      "Each party represents that it is not relying on any advice from the other party in entering this transaction."
+    ],
+    "default": [
+      "In the event of default, the non-defaulting party may terminate this transaction immediately.",
+      "Upon an Event of Default, all outstanding obligations shall become immediately due and payable."
+    ]
+  },
+  "fx_forward": {
+    "governing_law": [
+      "This Agreement shall be governed by and construed in accordance with the laws of England and Wales.",
+      "This Agreement shall be governed by and construed in accordance with the laws of New York State."
+    ],
+    "settlement": [
+      "Settlement shall occur on the agreed Forward Value Date as specified in this Confirmation.",
+      "Physical delivery of the contracted currencies shall occur on the Value Date unless a cash settlement election is made.",
+      "Non-Deliverable Forward settlement shall be calculated by reference to the Fixing Rate on the Fixing Date."
+    ],
+    "ndf_fixing": [
+      "The Fixing Rate shall be determined by reference to the Reuters page ABSFIX01 at 11:00 AM Singapore time.",
+      "The Settlement Amount shall equal the Notional Amount multiplied by the difference between the Forward Rate and the Fixing Rate."
+    ],
+    "representations": [
+      "Each party represents that it has full power and authority to enter into this transaction.",
+      "Each party represents that entering into this transaction does not violate any applicable law or regulation."
+    ],
+    "default": [
+      "In the event of default, the non-defaulting party may terminate this transaction immediately.",
+      "Upon an Event of Default, all outstanding obligations shall become immediately due and payable."
+    ]
+  },
+  "interest_rate_swap": {
+    "governing_law": [
+      "This Confirmation supplements and forms part of the ISDA Master Agreement dated between the parties.",
+      "This Agreement shall be governed by and construed in accordance with the laws of England and Wales.",
+      "This Agreement shall be governed by and construed in accordance with the laws of New York State."
+    ],
+    "floating_rate": [
+      "The Floating Rate shall be SOFR compounded in arrears, as published by the Federal Reserve Bank of New York.",
+      "The Floating Rate shall be EURIBOR for the relevant Interest Period, as published on Reuters page EURIBOR01.",
+      "The Floating Rate shall be SONIA compounded in arrears, as published by the Bank of England.",
+      "The Floating Rate shall be HIBOR for the relevant Interest Period as published by the Hong Kong Association of Banks."
+    ],
+    "day_count": [
+      "Fixed Rate Day Count Fraction: 30/360. Floating Rate Day Count Fraction: Actual/360.",
+      "Fixed Rate Day Count Fraction: Actual/365. Floating Rate Day Count Fraction: Actual/365.",
+      "Fixed Rate Day Count Fraction: 30/360. Floating Rate Day Count Fraction: Actual/365."
+    ],
+    "payment": [
+      "Fixed Rate Payer payments shall be made semi-annually on the 15th of each applicable month.",
+      "Floating Rate Payer payments shall be made quarterly, subject to Business Day adjustment.",
+      "Payments shall be netted where due on the same date and in the same currency."
+    ],
+    "termination": [
+      "Either party may terminate this swap upon the occurrence of a Termination Event as defined in the ISDA Master Agreement.",
+      "Early termination payments shall be calculated using the Close-out Amount methodology."
+    ],
+    "representations": [
+      "Each party represents that it has full power and authority to enter into this transaction.",
+      "Each party is a sophisticated financial institution capable of evaluating the risks of this transaction."
+    ]
+  },
+  "equity_trade": {
+    "governing_law": [
+      "This Agreement shall be governed by and construed in accordance with the laws of England and Wales.",
+      "This Agreement shall be governed by and construed in accordance with the laws of New York State.",
+      "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware."
+    ],
+    "settlement": [
+      "Settlement shall occur on a T+2 basis through the relevant central securities depository.",
+      "Settlement shall be effected through DTC (DTCC) on a T+2 basis in accordance with applicable rules.",
+      "Settlement shall occur through Euroclear/Clearstream on a T+2 basis unless otherwise agreed."
+    ],
+    "representations": [
+      "The Seller represents that it has good and marketable title to the Securities, free and clear of all liens.",
+      "Each party represents that it has full power and authority to enter into this transaction.",
+      "The Buyer represents that it has conducted its own due diligence with respect to the Securities."
+    ],
+    "regulatory": [
+      "This transaction is subject to applicable securities laws, including reporting obligations under MiFID II.",
+      "The parties acknowledge their obligations under SEC Rule 10b-5 and applicable insider trading regulations.",
+      "This transaction is subject to reporting requirements under EMIR and applicable trade reporting rules."
+    ],
+    "fees": [
+      "Each party shall bear its own transaction costs, brokerage fees, and applicable taxes.",
+      "Stamp duty, transfer taxes, and any other applicable taxes shall be borne by the Buyer."
+    ]
+  },
+  "bond_trade": {
+    "governing_law": [
+      "This Agreement shall be governed by and construed in accordance with the laws of England and Wales.",
+      "This Agreement shall be governed by and construed in accordance with the laws of New York State."
+    ],
+    "settlement": [
+      "Settlement shall occur on a T+2 basis through Euroclear or Clearstream as applicable.",
+      "Settlement shall be effected on a Delivery versus Payment (DvP) basis through the agreed settlement system.",
+      "Settlement shall occur through the relevant ICSD on the agreed Settlement Date."
+    ],
+    "accrued_interest": [
+      "The purchase price shall include accrued interest calculated on an Actual/Actual (ICMA) basis.",
+      "Accrued interest shall be calculated from the last coupon payment date to the Settlement Date on a 30/360 basis.",
+      "The Dirty Price shall include accrued interest from the preceding Interest Payment Date."
+    ],
+    "representations": [
+      "The Seller represents that the Securities are free and clear of all liens, charges, and encumbrances.",
+      "Each party represents that it has full power and authority to enter into this transaction.",
+      "Each party confirms it has received and reviewed the relevant offering documentation."
+    ],
+    "regulatory": [
+      "This transaction is subject to applicable bond market regulations and reporting requirements under MiFID II.",
+      "The parties acknowledge their obligations under EMIR for applicable OTC derivative components."
+    ]
+  },
+  "credit_default_swap": {
+    "governing_law": [
+      "This Confirmation supplements and forms part of the ISDA Master Agreement dated between the parties.",
+      "This Agreement shall be governed by and construed in accordance with the laws of England and Wales.",
+      "This Agreement shall be governed by and construed in accordance with the laws of New York State."
+    ],
+    "credit_events": [
+      "Credit Events shall include: Bankruptcy, Failure to Pay, Restructuring, Obligation Acceleration, and Repudiation/Moratorium.",
+      "Credit Events shall include: Bankruptcy and Failure to Pay only, as agreed between the parties.",
+      "Credit Events shall be as defined in the 2014 ISDA Credit Derivatives Definitions."
+    ],
+    "settlement_method": [
+      "Settlement Method: Physical Settlement. The Buyer shall deliver Deliverable Obligations with aggregate face value equal to the Physical Settlement Amount.",
+      "Settlement Method: Cash Settlement. The Cash Settlement Amount shall be determined by reference to the final price established in the relevant ISDA Credit Derivatives Auction.",
+      "Settlement Method: Auction Settlement as per the applicable ISDA Auction Settlement Terms."
+    ],
+    "premium": [
+      "The Fixed Rate (Premium) shall be paid by the Protection Buyer quarterly in arrears on each Premium Payment Date.",
+      "Premium payments shall be calculated on an Actual/360 day count basis.",
+      "The Running Spread shall be as specified in the relevant term sheet attached hereto."
+    ],
+    "representations": [
+      "Each party represents that it has full power and authority to enter into this transaction.",
+      "Each party is a sophisticated financial institution capable of evaluating the risks of credit derivative transactions.",
+      "The Protection Buyer represents that it has an insurable interest in the Reference Obligation."
+    ],
+    "regulatory": [
+      "This transaction is subject to mandatory clearing requirements under EMIR where applicable.",
+      "The parties acknowledge their trade reporting obligations under applicable EMIR/CFTC regulations.",
+      "This transaction may be subject to mandatory clearing through a recognized central counterparty."
+    ]
+  }
+}
