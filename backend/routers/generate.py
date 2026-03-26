@@ -1,11 +1,17 @@
-import json
+import sys
 import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+import json
 import tempfile
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Dict, Any, Optional
-from ..services import generator, validator, exporter, metrics
+import services.generator as generator
+import services.validator as validator
+import services.exporter as exporter
+import services.metrics as metrics
 
 router = APIRouter(prefix="/generate", tags=["generate"])
 

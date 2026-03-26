@@ -1,0 +1,41 @@
+{
+  "events": [
+    {
+      "type": "search",
+      "timestamp": "2026-03-25T02:58:02.759145",
+      "trade_type": "any",
+      "top_score": 61.2,
+      "result_count": 3,
+      "precision_hit": false
+    },
+    {
+      "type": "diff",
+      "timestamp": "2026-03-25T03:00:17.346742",
+      "trade_type": "fx_spot",
+      "total_diffs": 15,
+      "high_risk": 5,
+      "medium_risk": 6,
+      "low_risk": 4,
+      "overall_risk": "LOW"
+    },
+    {
+      "type": "search",
+      "timestamp": "2026-03-25T07:11:19.207286",
+      "trade_type": "any",
+      "top_score": 66.4,
+      "result_count": 3,
+      "precision_hit": false
+    },
+    {
+      "type": "diff",
+      "timestamp": "2026-03-25T07:12:23.688726",
+      "trade_type": "bond_trade",
+      "total_diffs": 32,
+      "high_risk": 14,
+      "medium_risk": 9,
+      "low_risk": 9,
+      "overall_risk": "LOW"
+    }
+  ],
+  "aggregates": {}
+}

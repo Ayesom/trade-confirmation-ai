@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
 from fastapi import APIRouter
-from ..services import metrics as metrics_service
+import services.metrics as metrics_service
 
 router = APIRouter(prefix="/metrics", tags=["metrics"])
 

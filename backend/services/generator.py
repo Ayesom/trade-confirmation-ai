@@ -4,7 +4,14 @@ import anthropic
 from typing import Dict, Any
 from .validator import validate_clauses
 
-client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+_client = None
+
+def get_client():
+    """Get or initialize the Anthropic client lazily."""
+    global _client
+    if _client is None:
+        _client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    return _client
 
 
 SYSTEM_PROMPT = """You are a senior trade confirmation specialist at a major investment bank with deep expertise in financial markets documentation. 
@@ -64,8 +71,8 @@ def generate_confirmation(
     """Generate a pre-populated trade confirmation using Claude."""
     prompt = build_generation_prompt(trade_data, template, clause_library)
 
-    message = client.messages.create(
-        model="claude-sonnet-4-20250514",
+    message = get_client().messages.create(
+        model="claude-3-5-sonnet-20241022",
         max_tokens=4096,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": prompt}]
@@ -107,8 +114,8 @@ Trade Confirmation:
 
 Write ONLY the narrative paragraph, no headers or bullet points."""
 
-    message = client.messages.create(
-        model="claude-sonnet-4-20250514",
+    message = get_client().messages.create(
+        model="claude-3-5-sonnet-20241022",
         max_tokens=512,
         messages=[{"role": "user", "content": prompt}]
     )

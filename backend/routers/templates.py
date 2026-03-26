@@ -1,22 +1,19 @@
-import json
+import sys
 import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+import json
 import tempfile
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Query
 from fastapi.responses import JSONResponse
 from typing import Optional
-from ..services import embeddings, parser, metrics
+import services.embeddings as embeddings
+import services.parser as parser
+import services.metrics as metrics
 
 router = APIRouter(prefix="/templates", tags=["templates"])
 
 CLAUSE_LIBRARY_PATH = os.path.join(os.path.dirname(__file__), "../data/clause_library/clauses.json")
-
-
-@router.on_event("startup")
-async def startup():
-    try:
-        embeddings.seed_templates()
-    except Exception as e:
-        print(f"Seeding warning: {e}")
 
 
 @router.get("/seed")
@@ -51,7 +48,6 @@ async def search_by_file(
     file: UploadFile = File(...),
     top_k: int = Form(3),
 ):
-    """Upload a trade document and find matching templates."""
     if not file.filename.lower().endswith((".pdf", ".docx", ".doc")):
         raise HTTPException(status_code=400, detail="Only PDF and DOCX files are supported.")
 

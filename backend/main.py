@@ -1,12 +1,15 @@
 import os
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
 load_dotenv()
 
-from .routers import templates, diff, generate, metrics_router
-from .services import embeddings
+from routers import templates, diff, generate, metrics_router
+from services import embeddings
 
 app = FastAPI(
     title="Trade Confirmation AI",
@@ -22,10 +25,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(templates.router)
-app.include_router(diff.router)
-app.include_router(generate.router)
-app.include_router(metrics_router.router)
+app.include_router(templates.router, prefix="/api")
+app.include_router(diff.router, prefix="/api")
+app.include_router(generate.router, prefix="/api")
+app.include_router(metrics_router.router, prefix="/api")
 
 
 @app.on_event("startup")
